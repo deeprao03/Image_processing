@@ -54,11 +54,15 @@ encode(img_path, sidx, bidx, outfile)
 
 # ---- Decoding ----
 img = decode(outfile)
+# ensure folder exists
+if not os.path.exists("results"):
+    os.makedirs("results")
 
-# ---- Display & Save ----
-cv2.imwrite("reconstructed.png", img)
+output_recon = "results/reconstructed.png"
+cv2.imwrite(output_recon, img)
+
 cv2.imshow("Reconstructed Image", img)
-print("\n[INFO] Reconstructed image saved as: reconstructed.png")
+print(f"\n[INFO] Reconstructed image saved as: {output_recon}")
 print("[INFO] Encoded file saved as: encoded_image.bin\n")
 
 cv2.waitKey(0)
