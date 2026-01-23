@@ -102,57 +102,37 @@ JPG/PNG are not used because they require decoder libraries, violating the proje
 
 ## 9. Mathematical Background
 
-Affine transformation matrix:
-\[
-A = T \times R \times H \times S
-\]
+The affine transformation combines the following operations:
+
+Affine Matrix:
+A = T × R × H × S
 
 Where:
 
-Scaling:
-\[
-S =
-\begin{bmatrix}
-Sx & 0 & 0 \\
-0 & Sy & 0 \\
-0 & 0 & 1
-\end{bmatrix}
-\]
+### Scaling matrix (S):
+[ Sx   0    0 ]
+[ 0    Sy   0 ]
+[ 0    0    1 ]
 
-Shearing:
-\[
-H =
-\begin{bmatrix}
-1 & Kx & 0 \\
-Ky & 1 & 0 \\
-0 & 0 & 1
-\end{bmatrix}
-\]
+### Shearing matrix (H):
+[ 1   Kx   0 ]
+[ Ky  1    0 ]
+[ 0   0    1 ]
 
-Rotation:
-\[
-R =
-\begin{bmatrix}
-\cos \theta & -\sin \theta & 0 \\
-\sin \theta & \cos \theta & 0 \\
-0 & 0 & 1
-\end{bmatrix}
-\]
+### Rotation matrix (R):
+[ cosθ  -sinθ   0 ]
+[ sinθ   cosθ   0 ]
+[ 0      0      1 ]
 
-Translation:
-\[
-T =
-\begin{bmatrix}
-1 & 0 & Tx \\
-0 & 1 & Ty \\
-0 & 0 & 1
-\end{bmatrix}
-\]
+### Translation matrix (T):
+[ 1   0   Tx ]
+[ 0   1   Ty ]
+[ 0   0   1  ]
 
-Final mapping:
-\[
-[x',y',1]^T = A \cdot [x,y,1]^T
-\]
+### Final Mapping:
+[ x' ]   [ a11  a12  a13 ]   [ x ]
+[ y' ] = [ a21  a22  a23 ] × [ y ]
+[ 1  ]   [ 0    0    1   ]   [ 1 ]
 
 Nearest neighbor sampling is used for pixel assignment.
 
