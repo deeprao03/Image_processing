@@ -29,10 +29,11 @@ All operations are done using pure Python and manual pixel manipulation.
 ---
 
 ## 4. User Inputs
+
 The following parameters are entered by the user:
 
 | Parameter | Meaning |
-|---|---|
+|-----------|---------------------------|
 | Sx | Horizontal scaling factor |
 | Sy | Vertical scaling factor |
 | θ | Rotation angle (degrees) |
@@ -46,7 +47,7 @@ The following parameters are entered by the user:
 ## 5. Supported Operations
 
 | Option | Operation | Output File |
-|---|---|---|
+|--------|-------------------|----------------------|
 | 1 | Scale | `result/scaled.bmp` |
 | 2 | Rotate | `result/rotated.bmp` |
 | 3 | Translate | `result/translated.bmp` |
@@ -58,8 +59,9 @@ Each result opens automatically after generation.
 ---
 
 ## 6. Project Structure
+
+```
 Lab02/
-│
 ├── main.py
 ├── image_reader.py
 ├── image_writer.py
@@ -71,6 +73,7 @@ Lab02/
 ├── input.bmp
 ├── README.md
 └── result/
+```
 
 
 ---
@@ -87,16 +90,18 @@ JPG/PNG are not used because they require decoder libraries, violating the proje
 
 ## 8. How to Run
 
-1. Place your input image in the project directory and rename it: input.bmp
+1. Place your input image in the project directory and rename it to `input.bmp`
 
-2. Run the program: python main.py
-
+2. Run the program:
+   ```
+   python main.py
+   ```
 
 3. Choose an operation and enter parameters when prompted.
 
 4. Output image will be:
-- saved in `result/`
-- opened automatically
+   - Saved in `result/`
+   - Opened automatically
 
 ---
 
