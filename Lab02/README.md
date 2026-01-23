@@ -121,25 +121,32 @@ Where:
 [ 0    0    1 ]
 ````
 ### Shearing matrix (H):
+````
 [ 1   Kx   0 ]
 [ Ky  1    0 ]
 [ 0   0    1 ]
+````
 
 ### Rotation matrix (R):
+````
 [ cosθ  -sinθ   0 ]
 [ sinθ   cosθ   0 ]
 [ 0      0      1 ]
+````
 
 ### Translation matrix (T):
+````
 [ 1   0   Tx ]
 [ 0   1   Ty ]
 [ 0   0   1  ]
+````
 
 ### Final Mapping:
+```
 [ x' ]   [ a11  a12  a13 ]   [ x ]
 [ y' ] = [ a21  a22  a23 ] × [ y ]
 [ 1  ]   [ 0    0    1   ]   [ 1 ]
-
+````
 Nearest neighbor sampling is used for pixel assignment.
 
 ---
