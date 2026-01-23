@@ -115,10 +115,11 @@ A = T × R × H × S
 Where:
 
 ### Scaling matrix (S):
+````
 [ Sx   0    0 ]
 [ 0    Sy   0 ]
 [ 0    0    1 ]
-
+````
 ### Shearing matrix (H):
 [ 1   Kx   0 ]
 [ Ky  1    0 ]
