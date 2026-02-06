@@ -12,6 +12,7 @@ Objective
    the image with (-1)^(x+y).
 
 Folder structure
+```
 ----------------
 project/
 │
@@ -19,8 +20,9 @@ project/
 ├── dft2d.py
 ├── basis.py
 └── result/
-
+```
 How to run
+```
 ----------
 python main.py
 
@@ -31,6 +33,7 @@ Row (x)
 Column (y)
 Width
 Height
+```
 
 Implementation details
 ----------------------
